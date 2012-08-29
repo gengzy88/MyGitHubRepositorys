@@ -8,7 +8,6 @@ import android.view.WindowManager;
 
 public class MainActivity extends Activity {
 	private MyGlSurfaceView m_surfaceView;
-	private MyRender m_Render;
 	private MyDrawableComposite m_drawableComposite;
 	
     @Override
@@ -21,14 +20,15 @@ public class MainActivity extends Activity {
          WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         m_surfaceView = new MyGlSurfaceView(this);
-        m_Render = new MyRender();
+//        m_Render = new MyRender();
         m_drawableComposite = new MyDrawableComposite();
-        m_Render.setDrawableComposite(m_drawableComposite);
-        m_surfaceView.setRenderer(m_Render);
+        m_surfaceView.setDrawableComposite(m_drawableComposite);
+//        m_surfaceView.setRenderer(m_Render);
         
         setContentView(m_surfaceView);
         
-        m_drawableComposite.add(new MyTriangle());
+        //m_drawableComposite.add(new MyTriangle());
+        m_drawableComposite.add(new MySquare());
     }
 
     @Override

@@ -2,13 +2,14 @@ package com.gengzy88.myopengles10;
 
 import java.util.ArrayList;
 import javax.microedition.khronos.opengles.GL10;
-import com.gengzy88.myopengles10.MyRender.MyDrawAble;
 
-public class MyDrawableComposite implements MyDrawAble{
+import com.gengzy88.myopengles10.MyGlSurfaceView.MyDrawAble;
+
+public class MyDrawableComposite implements MyGlSurfaceView.MyDrawAble{
 	private ArrayList<MyDrawAble> m_DrawAbles;
 	
 	public MyDrawableComposite(){
-		m_DrawAbles = new ArrayList<MyRender.MyDrawAble>();
+		m_DrawAbles = new ArrayList<MyDrawAble>();
 	}
 	
 	public void draw(GL10 gl) {
