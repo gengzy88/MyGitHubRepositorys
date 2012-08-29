@@ -15,7 +15,7 @@ public class MySquare extends MyShape{
 	public MySquare() {
 		m_angle = 0f;
 		float floatCoord[] = new float[]{
-			-0.5f, 0.5f, -0.5f,	
+			-0.5f, 0.5f, -0.5f,
 			0.5f, 0.5f, -0.5f,
 			0.5f, -0.5f, -0.5f,
 			-0.5f, -0.5f, -0.5f,
@@ -30,7 +30,9 @@ public class MySquare extends MyShape{
 				1.0f, 0, 0, 1.0f,
 				0, 1.0f, 0, 1.0f,
 				0, 0, 1.0f, 1.0f,
+				
 				0, 0, 1.0f, 1.0f,
+				
 			};
 		ByteBuffer colorByteBuffer = ByteBuffer.allocateDirect(colorCoods.length*4);
 		colorByteBuffer.order(ByteOrder.nativeOrder());
@@ -42,7 +44,7 @@ public class MySquare extends MyShape{
 		// TODO Auto-generated method stub
 		//gl.glPointSize(8f);
 		m_angle += 2;
-		gl.glRotatef(m_angle, 0, 0, 1.0f);
+		gl.glRotatef(m_angle, 0, 0.0f, 1.0f);
 		gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
 		gl.glEnableClientState(GL10.GL_COLOR_ARRAY);
 		gl.glVertexPointer(3, GL10.GL_FLOAT, 0, m_vertexBuffer);

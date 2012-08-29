@@ -28,7 +28,8 @@ public class MainActivity extends Activity {
         setContentView(m_surfaceView);
         
         //m_drawableComposite.add(new MyTriangle());
-        m_drawableComposite.add(new MySquare());
+        //m_drawableComposite.add(new MySquare());
+        m_drawableComposite.add(new MyTriangularPyramid());
     }
 
     @Override
