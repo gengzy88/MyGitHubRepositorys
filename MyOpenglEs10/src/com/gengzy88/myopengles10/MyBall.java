@@ -8,7 +8,6 @@ public class MyBall extends MyShape{
 		// TODO Auto-generated constructor stub
 	}
 	
-	@Override
 	public void draw(GL10 gl) {
 		// TODO Auto-generated method stub
 		

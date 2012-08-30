@@ -12,10 +12,15 @@ public class MyGlSurfaceView extends GLSurfaceView{
 		super(context);
 		// TODO Auto-generated constructor stub
 		setRenderer(new MyRender());
+		m_drawableComposite = new MyDrawableComposite();
+		m_drawableComposite.onInit(context);
 	}
 
 	public interface MyDrawAble{
-		void draw(GL10 gl);
+		public void draw(GL10 gl);
+		public void onInit(Context contex);
+		public void onSurfaceChanged(GL10 gl);
+		public void onSurfaceCreate(GL10 gl);
 	}
 	
 	private class MyRender implements GLSurfaceView.Renderer{
@@ -52,7 +57,7 @@ public class MyGlSurfaceView extends GLSurfaceView{
 //		        gl.glHint(GL10.GL_PERSPECTIVE_CORRECTION_HINT, GL10.GL_NICEST);
 		}
 	}
-	public void setDrawableComposite(MyDrawableComposite drawableComposite){
-		m_drawableComposite = drawableComposite;
+	public MyDrawableComposite getDrawableComposite(){
+		return m_drawableComposite;
 	}
 }

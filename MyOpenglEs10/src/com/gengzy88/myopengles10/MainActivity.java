@@ -20,16 +20,15 @@ public class MainActivity extends Activity {
          WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         m_surfaceView = new MyGlSurfaceView(this);
-//        m_Render = new MyRender();
-        m_drawableComposite = new MyDrawableComposite();
-        m_surfaceView.setDrawableComposite(m_drawableComposite);
-//        m_surfaceView.setRenderer(m_Render);
+        m_drawableComposite = m_surfaceView.getDrawableComposite();
         
         setContentView(m_surfaceView);
         
         //m_drawableComposite.add(new MyTriangle());
         //m_drawableComposite.add(new MySquare());
-        m_drawableComposite.add(new MyTriangularPyramid());
+        //m_drawableComposite.add(new MyTriangularPyramid());
+        //m_drawableComposite.add(new MyCube());
+        m_drawableComposite.add(new MyTexture());
     }
 
     @Override
