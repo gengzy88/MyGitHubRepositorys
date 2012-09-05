@@ -13,7 +13,7 @@
 JNIEXPORT jstring JNICALL getNativeString(JNIEnv *env, jclass clazz)
 {
 	printf("hello in c native code./n");
-	return (*env)->NewStringUTF(env, "hello world returned.");
+	return (*env)->NewStringUTF(env, "hello world my test returned.");
 }
 
 #define JNIREG_CLASS "com/gengzy88/myjnitest/MyJniTestActivity"//指定要注册的类
